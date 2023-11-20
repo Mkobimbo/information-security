@@ -13,6 +13,8 @@ app.use(helmet.frameguard({ action: 'deny'}));
 //Mitigate the risk of cross site scripting
 app.use(helmet.xssFilter());
 
+//avoid inferring the mime type
+app.use(helmet.noSniff())
 
 
 
