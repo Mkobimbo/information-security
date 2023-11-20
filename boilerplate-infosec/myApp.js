@@ -2,11 +2,10 @@ const express = require('express');
 const helmet = require('helmet');
 const app = express();
 
-const PORT = process.env.port || 3030;
+// Hide potential dangerous information with helmet.hidePoweredBy()
+// spoof a fake entry to fool hackers
 
-app.listen(PORT, () => {
-  console.log(`info-sec server started on port ${PORT}`);
-});
+app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0'}));
 
 
 
