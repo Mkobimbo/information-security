@@ -10,6 +10,9 @@ app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0'}));
 //mitigating the risk of clickjacking
 app.use(helmet.frameguard({ action: 'deny'}));
 
+//Mitigate the risk of cross site scripting
+app.use(helmet.xssFilter());
+
 
 
 
