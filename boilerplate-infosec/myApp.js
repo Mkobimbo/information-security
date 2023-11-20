@@ -29,6 +29,9 @@ app.use(helmet.dnsPrefetchControl());
 //Disable Client-Side Caching with helmet.noCache()
 app.use(helmet.noCache());
 
+//Set a Content Security Policy with helmet.contentSecurityPolicy()
+
+
 
 
 
