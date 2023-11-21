@@ -50,6 +50,9 @@ app.use(helmet({
   dnsPrefetchControl: false     // disable
 }))
 
+//Understand BCrypt Hashes
+
+
 
 
 
