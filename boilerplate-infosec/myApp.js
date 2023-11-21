@@ -30,6 +30,11 @@ app.use(helmet.dnsPrefetchControl());
 app.use(helmet.noCache());
 
 //Set a Content Security Policy with helmet.contentSecurityPolicy()
+app.use(helmet.csp({ directives: {
+  defaultSrc: ["'self'"],
+  scriptSrc: ["'self'", "trusted-cdn.com"]
+  
+}}));
 
 
 
